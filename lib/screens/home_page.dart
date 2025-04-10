@@ -11,8 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-//connect to firestore 
+  //connect to firestore
 
   final FirebaseFirestore db =
       FirebaseFirestore.instance; //new firestore instance
@@ -78,7 +77,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  //Delete the task 
+  //Delete the task
   Future<void> removeTasks(int index) async {
     final task = tasks[index];
 
