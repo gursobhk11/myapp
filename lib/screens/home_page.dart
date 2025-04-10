@@ -11,6 +11,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+//connect to firestore 
+
   final FirebaseFirestore db =
       FirebaseFirestore.instance; //new firestore instance
   final TextEditingController nameController =
@@ -41,7 +44,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  //Function that adds new tasks to local state & firestore database
+  // adds new tasks to local state & firestore database
   Future<void> addTask() async {
     final taskName = nameController.text.trim();
 
@@ -75,7 +78,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  //Delete the task locally & in the Firestore
+  //Delete the task 
   Future<void> removeTasks(int index) async {
     final task = tasks[index];
 
